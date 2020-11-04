@@ -29,9 +29,6 @@ class NotesListContainer extends Component {
     notesRef.on('value', snapshot => {
       const collection = snapshot.val();
 
-      // If the user has notes stored in the database (collection is not null), get the keys of the
-      // firebase JSON object and reduce over them to get an array of notes grouped and sorted
-      // by creation date. const notesList has the shape: [{date: <string>, data: [array]}]
       if(collection) {
         const keys = Object.keys(collection);
         const notesList = keys.reduceRight((acc, key) => {

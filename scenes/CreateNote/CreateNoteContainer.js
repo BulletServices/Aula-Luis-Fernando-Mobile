@@ -57,7 +57,7 @@ class CreateNoteContainer extends Component {
         .catch(e => { throw new Error(e) })
       }
     } catch(e) {
-      this.setState({errorMessage: 'Sorry, this note couldn\'t be saved :' + e.message});
+      this.setState({errorMessage: 'A nota não pode ser salva :' + e.message});
     }
   }
 
@@ -71,7 +71,7 @@ class CreateNoteContainer extends Component {
 
         <TextInput
           style={styles.titleInput}
-          placeholder='Give it a title...'
+          placeholder='Título'
           placeholderTextColor='#0F5340'
           onChangeText={text => this.setState({noteTitle: text})}
           value={this.state.noteTitle}
@@ -79,7 +79,7 @@ class CreateNoteContainer extends Component {
 
         <TextInput
           style={styles.textInput}
-          placeholder='Enter note text here...'
+          placeholder='Descrição'
           placeholderTextColor='#0F5340'
           multiline={true}
           onChangeText={text => this.setState({noteText: text})}
@@ -93,7 +93,7 @@ class CreateNoteContainer extends Component {
 
         <CommonButton
           onPress={() => this.saveNote()}
-          buttonText={'save'.toUpperCase()}
+          buttonText={'Salvar'.toUpperCase()}
         />
       </View>
     )

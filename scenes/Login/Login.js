@@ -25,8 +25,8 @@ class Login extends Component {
     return (
       <View style={styles.wrapper}>
         <TextInput
-          label='Email Address'
-          placeholder='example@gmail.com'
+          label='Email'
+          placeholder='exemplo@gmail.com'
           value={this.state.email}
           onChangeText={email => this.setState({email})}
           secureTextEntry={false}
@@ -34,8 +34,8 @@ class Login extends Component {
         />
 
         <TextInput
-          label='Password'
-          placeholder='enter password'
+          label='Senha'
+          placeholder='Sua Senha'
           value={this.state.password}
           onChangeText={password => this.setState({password})}
           secureTextEntry={true}
@@ -49,7 +49,7 @@ class Login extends Component {
             /> :
             <CommonButton
               onPress={() => loginUser(this.state.email, this.state.password)}
-              buttonText={error || 'Sign In'}
+              buttonText={error || 'Entrar'}
             />
         }
       </View>

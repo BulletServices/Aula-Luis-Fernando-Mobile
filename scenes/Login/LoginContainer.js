@@ -37,7 +37,7 @@ class LoginContainer extends Component {
             this.setState({error: '', loading: false});
             navigator.navigate('Home');
           })
-          .catch(error => this.setState({error: 'Sign-in failed', loading: false}))
+          .catch(error => this.setState({error: 'Erro ao entrar', loading: false}))
       });
   }
 
